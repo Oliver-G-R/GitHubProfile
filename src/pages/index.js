@@ -10,8 +10,6 @@ export default function Home() {
 
   const {data: profile, loading} = useGetProfileGH(profileSearch)
 
-  console.log(profile)
-  
   return (
     
     <>
@@ -22,7 +20,7 @@ export default function Home() {
             <SearchForm setProfileSearch={setProfileSearch} />
 
             {loading && <p>Loading...</p>}
-            {profile ? <CardProfile {...profile} /> : <p>No profile found</p>} 
+            {profile && !loading ? <CardProfile {...profile} /> : <p>No profile found</p>} 
         </main>
       </div>
     </>
