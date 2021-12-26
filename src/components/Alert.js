@@ -1,13 +1,13 @@
-export const Alert = ({children, type}) => {
-    const bgAlert = () => {
-        const tyAlerts = {
-            "warning": "#ff7e35",
-            "danger": "#ff5656"
-        }
-
-        return tyAlerts[type] ||"#474645"
+export const Alert = ({ children, type }) => {
+  const bgAlert = () => {
+    const tyAlerts = {
+      warning: '#ff7e35',
+      danger: '#ff5656'
     }
-    return (
+
+    return tyAlerts[type] || '#474645'
+  }
+  return (
         <>
             <div >
                 {children}
@@ -25,5 +25,5 @@ export const Alert = ({children, type}) => {
                 }
             `}</style>
         </>
-    )
+  )
 }

@@ -1,32 +1,32 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export const SearchForm = ({ setProfileSearch }) => {
-    const [search, setSearch] = useState('');
-    
-    const handleChange = (e) => {
-        const { value } = e.target;
-        setSearch(value);
-    }
+  const [search, setSearch] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setProfileSearch(search);
-        setSearch('');
-    }
+  const handleChange = (e) => {
+    const { value } = e.target
+    setSearch(value)
+  }
 
-    return (
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setProfileSearch(search)
+    setSearch('')
+  }
+
+  return (
         <>
             <form onSubmit={handleSubmit} >
-                    <input 
+                    <input
                         onChange={handleChange}
                         type="text"
-                        
-                        value={search} 
-                        placeholder="Search user name" 
+
+                        value={search}
+                        placeholder="Search user name"
                         />
 
-                    <button 
-                        
+                    <button
+
                         type="submit">
                         Search
                     </button>
@@ -60,5 +60,5 @@ export const SearchForm = ({ setProfileSearch }) => {
                 }
             `}</style>
         </>
-    )
+  )
 }

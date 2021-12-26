@@ -6,19 +6,19 @@ import { CardProfile } from '../components/CardProfile'
 import { useGetProfileGH } from '../hooks/useGetProfileGH'
 import { Alert } from '../components/Alert'
 
-export default function Home() {
+export default function Home () {
   const [profileSearch, setProfileSearch] = useState('Oliver-G-R')
 
-  const {data: profile, loading} = useGetProfileGH(profileSearch)
+  const { data: profile, loading } = useGetProfileGH(profileSearch)
 
   return (
     <>
       <HeadInfo title="Github Profile" />
       <div className="global-container">
-        <main className={stylesHome.main}> 
+        <main className={stylesHome.main}>
             <h1 className={stylesHome.title}>Github Profile</h1>
             <SearchForm setProfileSearch={setProfileSearch} />
-            
+
             {loading ? <p>Loading...</p> : <RenderCardProfile profile={profile}/> }
         </main>
       </div>
@@ -26,8 +26,10 @@ export default function Home() {
   )
 }
 
-const RenderCardProfile = ({profile}) => {
-  return profile ? (
-    <CardProfile {...profile} /> 
-  ) : <Alert type="warning" >Profile Not Found</Alert>
+const RenderCardProfile = ({ profile }) => {
+  return profile
+    ? (
+    <CardProfile {...profile} />
+      )
+    : <Alert type="warning" >Profile Not Found</Alert>
 }

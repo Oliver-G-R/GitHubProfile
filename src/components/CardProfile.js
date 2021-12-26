@@ -1,14 +1,14 @@
 export const CardProfile = ({
-    avatar,
-    profileUrl,
-    name,
-    userName,
-    followers,
-    following,
-    publicRepos,
+  avatar,
+  profileUrl,
+  name,
+  userName,
+  followers,
+  following,
+  publicRepos
 
 }) => {
-    return (
+  return (
         <>
             <section>
                 <header>
@@ -17,7 +17,7 @@ export const CardProfile = ({
                     </div>
                     <div className="user-name-content">
                         <h2>{name}</h2>
-                        <a target="_blank" href={profileUrl}>{userName}</a>
+                        <a target="_blank" href={profileUrl} rel="noreferrer">{userName}</a>
                     </div>
                 </header>
 
@@ -36,7 +36,7 @@ export const CardProfile = ({
                     </div>
                 </article>
             </section>
-    
+
             <style jsx>{`
                 section{
                     border-radius: 2rem;
@@ -92,5 +92,5 @@ export const CardProfile = ({
                 }
             `}</style>
         </>
-    )
+  )
 }
