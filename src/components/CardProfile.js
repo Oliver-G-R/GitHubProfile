@@ -10,18 +10,18 @@ export const CardProfile = ({
 }) => {
     return (
         <>
-            <section className="section-profile">
-                <header className="section-profile__header-info">
-                    <div className="section-profile__container-avatar">
-                        <img className="section-profile__avatar" src={avatar} alt="Avatar" />
+            <section>
+                <header>
+                    <div className="container-avatar">
+                        <img src={avatar} alt="Avatar" />
                     </div>
-                    <div className="section-profile__userName">
+                    <div className="user-name-content">
                         <h2>{name}</h2>
                         <a target="_blank" href={profileUrl}>{userName}</a>
                     </div>
                 </header>
-    
-                <article className="section-profile__card-info-social">
+
+                <article>
                     <div>
                         <h3>Followers</h3>
                         <p>{followers}</p>
@@ -38,51 +38,57 @@ export const CardProfile = ({
             </section>
     
             <style jsx>{`
-                .section-profile {
+                section{
                     border-radius: 2rem;
                     padding: 3rem;
                     background-color: var(--color-secondary);
                     margin-top: 2rem;
+
+                    header{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        gap: 2rem;
+                    }
+
+                    .container-avatar{
+                        width: 10rem;
+                        height: 10rem;
+                        overflow: hidden;
+                        border-radius: 100%;
+                        background-color: var(--color-primary);
+
+                        img{
+                            height: 100%;
+                        }
+                    } 
+
+                    .user-name-content{
+                        line-height: 3rem;
+                        a{
+                            color: var(--text-color-seconday)
+                        }
+                    }
                 }
+                
+                section{
+                    article{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        margin-top: 2rem;
+                        gap:2rem;
+                        background-color: var(--color-primary);
+                        padding: 2rem;
+                        border-radius: 2rem;
 
-                .section-profile__header-info{
-                    display: flex;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    gap: 2rem;
-                } 
-
-                .section-profile__container-avatar{
-                    width: 10rem;
-                    height: 10rem;
-                    overflow: hidden;
-                    border-radius: 100%;
-                } 
-
-                .section-profile__avatar{
-                    height: 100%;
-                }
-
-                .section-profile__userName{
-                    line-height: 3rem;
-                }
-
-                .section-profile__card-info-social{
-                    display: flex;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
-                    margin-top: 2rem;
-                    gap:2rem;
-                    background-color: var(--color-primary);
-                    padding: 2rem;
-                    border-radius: 2rem;
-                }
-
-                .section-profile__card-info-social p{
-                    font-weight: 700;
-                    margin-top: 1.5rem;
-                    font-size: 2.5rem;
-                    color: var(--text-color-primary)
+                        p{
+                            font-weight: 700;
+                            margin-top: 1.5rem;
+                            font-size: 2.5rem;
+                            color: var(--text-color-primary)
+                        }
+                    }
                 }
             `}</style>
         </>
