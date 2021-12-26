@@ -5,6 +5,7 @@ import { HeadInfo } from '../components/HeadInfo'
 import { CardProfile } from '../components/CardProfile'
 import { useGetProfileGH } from '../hooks/useGetProfileGH'
 import { Alert } from '../components/Alert'
+import { Loading } from '../components/Loading'
 
 export default function Home () {
   const [profileSearch, setProfileSearch] = useState('Oliver-G-R')
@@ -19,7 +20,7 @@ export default function Home () {
             <h1 className={stylesHome.title}>Github Profile</h1>
             <SearchForm setProfileSearch={setProfileSearch} />
 
-            {loading ? <p>Loading...</p> : <RenderCardProfile profile={profile}/> }
+            {loading ? <Loading/> : <RenderCardProfile profile={profile}/> }
         </main>
       </div>
     </>
