@@ -7,16 +7,17 @@ export const Alert = ({ children, type }) => {
 
     return tyAlerts[type] || '#474645'
   }
+
   return (
         <>
-            <div >
+            <div className="alert">
                 {children}
             </div>
 
             <style jsx>{`
                 div{
                     width: 100%;
-                    padding: 2rem;
+                    padding: 1rem;
                     margin-top: 2rem;
                     color: var(--text-color-primary);
                     border-radius: 1rem;

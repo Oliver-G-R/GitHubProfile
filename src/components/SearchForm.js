@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { Alert } from './Alert'
 
 export const SearchForm = ({ setProfileSearch }) => {
   const [search, setSearch] = useState('')
+  const [error, setError] = useState(false)
+  const regexUserNameGithub = /^[a-z\d](?:[a-z\d]|-(?=[a-z\d])){0,38}$/i
 
   const handleChange = (e) => {
     const { value } = e.target
@@ -10,8 +13,13 @@ export const SearchForm = ({ setProfileSearch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setProfileSearch(search)
-    setSearch('')
+    if (regexUserNameGithub.test(search)) {
+      setProfileSearch(search)
+      setSearch('')
+      setError(false)
+    } else {
+      setError(true)
+    }
   }
 
   return (
@@ -26,11 +34,14 @@ export const SearchForm = ({ setProfileSearch }) => {
                         />
 
                     <button
-
                         type="submit">
                         Search
                     </button>
+
             </form>
+            {error && <Alert showAlert={setError} type="danger" >
+                User not valid
+            </Alert>}
 
             <style jsx>{`
                 form {

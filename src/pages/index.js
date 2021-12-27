@@ -30,7 +30,8 @@ export default function Home () {
 const RenderCardProfile = ({ profile }) => {
   return profile
     ? (
-    <CardProfile {...profile} />
+        <CardProfile {...profile} />
       )
-    : <Alert type="warning" >Profile Not Found</Alert>
+    : <Alert
+        type="warning" >Profile Not Found</Alert>
 }

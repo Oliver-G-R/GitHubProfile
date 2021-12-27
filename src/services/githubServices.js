@@ -1,8 +1,12 @@
+import config from '../config'
+
+const { GH_KEYS: { CLIENT_ID, CLIENT_SECRET } } = config
+
 export const getUserData = async (username) => {
-  const response = await fetch(`https://api.github.com/users/${username}`)
-
+  const response = await fetch(
+    `https://api.github.com/users/${username}?client_id=${CLIENT_ID}&client_secret=${CLIENT_SECRET}`
+  )
   const data = await response.json()
-
   if (!data.message) {
     return {
       avatar: data.avatar_url,
