@@ -8,6 +8,7 @@ import { Alert } from '../components/Alert'
 import { Loading } from '../components/Loading'
 import { CardProjects } from '../components/CardProjects'
 import { ContentCardProjects } from '../components/ContentCardProjects'
+import GithubIcon from '../assets/github-icon-1'
 
 export default function Home () {
   const [profileSearch, setProfileSearch] = useState('Oliver-G-R')
@@ -25,7 +26,12 @@ export default function Home () {
       <HeadInfo title="Github Profile" />
       <div className="global-container">
         <main className={stylesHome.main}>
-            <h1 className={stylesHome.title}>Github Profile</h1>
+            <div className={stylesHome.contentTitle}>
+              <h1>Github Profile</h1>
+              <a href="https://github.com/Oliver-G-R/GitHubProfile" target="_blank" rel="noreferrer" >
+                <GithubIcon width={35} fill="var(--text-color-primary)" />
+              </a>
+            </div>
             <SearchForm setProfileSearch={setProfileSearch} />
             {loading ? <Loading/> : <RenderAllSectionProfile user={user} reposGH={reposGH}/> }
         </main>

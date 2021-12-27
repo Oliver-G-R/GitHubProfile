@@ -60,6 +60,7 @@ export const SearchForm = ({ setProfileSearch }) => {
                     height: 100%;
                     width: 90%;
                     background: transparent;
+                    margin-right: 1rem;
                 }
 
                 form button {
@@ -70,6 +71,10 @@ export const SearchForm = ({ setProfileSearch }) => {
                     padding: 1rem;
                     font-size: 1.5rem;
                     background-color: var(--color-tertiary);
+                    transition: all 0.3s ease-in-out;
+                    &:hover{
+                      opacity: .8;
+                    }
                 }
             `}</style>
         </>

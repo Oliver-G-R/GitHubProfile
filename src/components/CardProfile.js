@@ -58,7 +58,7 @@ export const CardProfile = ({
                         height: 10rem;
                         box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
                         overflow: hidden;
-                        border-radius: 100%;
+                        border-radius: 20%;
                         background-color: var(--color-primary);
 
                         img{
@@ -67,9 +67,19 @@ export const CardProfile = ({
                     } 
 
                     .user-name-content{
-                        line-height: 3rem;
                         a{
-                            color: var(--text-color-seconday)
+                            display: block;
+                            text-align: center;
+                            padding: .5rem;
+                            margin-top: 2rem;
+                            background-color: var(--color-tertiary);
+                            border-radius: .5rem;
+                            color: var(--text-color-primary);
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover{
+                                opacity: .8;
+                            }
                         }
                     }
                 }
@@ -79,10 +89,10 @@ export const CardProfile = ({
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
-
+                        background: radial-gradient(circle, var(--color-secondary ) 0%, var(--color-primary) 100%);
+                        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
                         margin-top: 4rem;
                         gap:2rem;
-                        background-color: var(--color-primary);
                         padding: 2.5rem 3rem;
                         border-radius: 2rem;
                         

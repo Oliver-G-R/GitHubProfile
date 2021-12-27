@@ -28,6 +28,8 @@ export const CardProjects = ({
                     background: radial-gradient(circle, var(--color-primary ) 0%, var(--color-secondary) 100%);
                     width: 100%;
                     padding: 2rem;
+                    max-height: 200px;
+                    overflow: hidden;
                     border-radius: 1rem;
                     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
                     transition: all 0.3s ease-in-out;
@@ -36,12 +38,15 @@ export const CardProjects = ({
                         display: flex;
                         flex-direction: column;
                         line-height: 3rem;
+                        
 
                         p{
                             color: var(--text-color-seconday);
+                            
                         }
                     }
                     &:hover{
+                    transform: translateY(-1rem);
                        opacity: .8;
                     }
                     footer span{
