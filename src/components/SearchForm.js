@@ -51,6 +51,8 @@ export const SearchForm = ({ setProfileSearch }) => {
                     justify-content: space-between;
                     align-items: center;
                     padding: 1.2rem;
+                    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+
                 }
 
                 form input {

@@ -43,6 +43,8 @@ export const CardProfile = ({
                     padding: 3rem;
                     background-color: var(--color-secondary);
                     margin-top: 2rem;
+                    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+
 
                     header{
                         display: flex;
@@ -54,6 +56,7 @@ export const CardProfile = ({
                     .container-avatar{
                         width: 10rem;
                         height: 10rem;
+                        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
                         overflow: hidden;
                         border-radius: 100%;
                         background-color: var(--color-primary);
@@ -76,11 +79,13 @@ export const CardProfile = ({
                         display: flex;
                         justify-content: space-between;
                         flex-wrap: wrap;
-                        margin-top: 2rem;
+
+                        margin-top: 4rem;
                         gap:2rem;
                         background-color: var(--color-primary);
-                        padding: 2rem;
+                        padding: 2.5rem 3rem;
                         border-radius: 2rem;
+                        
 
                         p{
                             font-weight: 700;

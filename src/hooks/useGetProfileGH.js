@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getUserData } from '../services/githubServices'
+import { getUserData, getReposGH } from '../services/githubServices'
 
 export const useGetProfileGH = (userName) => {
   const [profile, setProfile] = useState({
@@ -8,11 +8,19 @@ export const useGetProfileGH = (userName) => {
   })
 
   useEffect(() => {
-    getUserData(userName)
-      .then(data => setProfile({
+    Promise.allSettled([
+      getUserData(userName),
+      getReposGH(userName)
+    ]).then(([userData, repos]) => {
+      const [user, reposGH] = [userData.value, repos.value]
+      setProfile({
         loading: false,
-        data
-      }))
+        data: {
+          user,
+          reposGH
+        }
+      })
+    })
   }, [userName])
 
   return profile
