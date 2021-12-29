@@ -25,7 +25,7 @@ export const CardProjects = ({
 
             <style jsx>{`
                 a{
-                    background: radial-gradient(circle, var(--color-primary ) 0%, var(--color-secondary) 100%);
+                    background:var(--bg-radial);
                     width: 100%;
                     padding: 2rem;
                     max-height: 200px;
@@ -33,6 +33,7 @@ export const CardProjects = ({
                     border-radius: 1rem;
                     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
                     transition: all 0.3s ease-in-out;
+                    
 
                     header{
                         display: flex;

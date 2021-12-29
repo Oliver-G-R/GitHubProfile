@@ -56,7 +56,7 @@ export const SearchForm = ({ setProfileSearch }) => {
                 }
 
                 form input {
-                    color: #fff;
+                    color:var(--text-color-primary);
                     height: 100%;
                     width: 90%;
                     background: transparent;
@@ -64,7 +64,7 @@ export const SearchForm = ({ setProfileSearch }) => {
                 }
 
                 form button {
-                    color: var(--text-color-primary);
+                    color: var(--text-color-btn);
                     border-radius: 1rem;
                     cursor: pointer;
                     font-weight: 700;
