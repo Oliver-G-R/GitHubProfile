@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getUserData, getReposGH } from '../services/githubServices'
+import { getUserData, getReposGH } from 'services/githubServices'
 
 export const useGetProfileGH = (userName) => {
   const [profile, setProfile] = useState({

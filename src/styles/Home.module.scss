@@ -14,17 +14,14 @@
     div{
         display: flex;
         align-items: center;
+
+        a{
+            animation: float 4s ease-in-out infinite;
+        }
     }
     h1{
         margin-right: 2rem;
     }
-
-    a > svg{
-        animation: float 3s ease-in-out infinite;
-        -webkit-animation: float 3s ease-in-out infinite;
-    }
-
-
 }
 
 @media (max-width: 678px){

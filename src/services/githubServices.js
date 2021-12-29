@@ -1,4 +1,4 @@
-import config from '../config'
+import config from 'config'
 
 const { GH_KEYS: { CLIENT_ID, CLIENT_SECRET } } = config
 const baseUrl = 'https://api.github.com/users'

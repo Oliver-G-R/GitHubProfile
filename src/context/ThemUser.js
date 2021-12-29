@@ -1,6 +1,6 @@
 import { createContext, useEffect } from 'react'
 
-import { UseLocalStorage } from '../hooks/UseLocalStorage'
+import { UseLocalStorage } from 'hooks/UseLocalStorage'
 
 const initialValues = {
   theme: 'light',
